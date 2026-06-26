@@ -1,6 +1,6 @@
 const { analyzeEvidence } = require('../services/evidence');
 const { classifyTicket } = require('../services/classifier');
-const { generateAiText } = require('../services/aiWorker');
+const { generateAiText } = require('../services/aiworker');
 const { applySafetyGuardrails } = require('../utils/safety');
 
 const analyze = async (req, res) => {
