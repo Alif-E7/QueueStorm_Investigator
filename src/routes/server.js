@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ticketController = require('../controllers/ticket');
+const ticketController = require('../controller/ticket');
 const validateTicket = require('../middlewares/validator');
 
 // Health Check Endpoint (60 সেকেন্ড রুল)

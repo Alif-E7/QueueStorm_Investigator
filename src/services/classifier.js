@@ -1,7 +1,7 @@
 const classifyTicket = (complaint) => {
     const text = complaint.toLowerCase();
     
-    if (text.includes("otp") || text.includes("pin") || text.includes("password") || text.includes("call")) {
+    if (text.includes("otp") || text.includes("pin") || text.includes("password")) {
         return { case_type: "phishing_or_social_engineering", department: "fraud_risk", severity: "critical", human_review_required: true };
     }
     if (text.includes("wrong number") || text.includes("mistake") || text.includes("wrong person")) {

@@ -10,14 +10,17 @@ const generateAiText = async (complaint, classification, evidence) => {
                 { role: "system", content: generateSystemPrompt() },
                 { role: "user", content: prompt }
             ],
-            model: "llama3-8b-8192", // Fast model for JSON response
+            model: "llama-3.1-8b-instant", // Fast model for JSON response
             temperature: 0.2,
             response_format: { type: "json_object" }
         });
 
         return JSON.parse(chatCompletion.choices[0].message.content);
     } catch (error) {
-        console.error("Groq AI Error:", error);
+        console.log("=== GROQ API ERROR ===");
+        console.log(error.message || error);
+        console.log("======================");
+        
         // Fallback jeno API crash na kore
         return {
             agent_summary: "Customer issue requires manual review.",
