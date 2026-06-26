@@ -26,13 +26,13 @@ The service follows a layered architecture to ensure accuracy, safety, and perfo
 
 ### 1. Health Check
 Checks if the service is operational.
-- **URL:** `https://queuestorm-investigator-ekyi.onrender.com/health`
+- **URL:** `[https://queuestorm-investigator-ekyi.onrender.com/health](https://queuestorm-investigator-ekyi.onrender.com/health)`
 - **Method:** `GET`
 - **Response:** `{"status": "ok"}`
 
 ### 2. Analyze Ticket
 The core service endpoint that analyzes customer complaints using transaction data.
-- **URL:** `https://queuestorm-investigator-ekyi.onrender.com/analyze-ticket`
+- **URL:** `[https://queuestorm-investigator-ekyi.onrender.com/analyze-ticket](https://queuestorm-investigator-ekyi.onrender.com/analyze-ticket)`
 - **Method:** `POST`
 - **Headers:** `Content-Type: application/json`
 - **Body Example:**
@@ -51,23 +51,3 @@ The core service endpoint that analyzes customer complaints using transaction da
     }
   ]
 }
-
-## 🚀 How to Run Locally
-
-### Prerequisites
-- Node.js (v18+)
-- Groq API Key
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Alif-E7/QueueStorm_Investigator
-   cd queuestorm-investigator
-2. Install dependencies:
-   ```bash
-   npm install 
-### run
-    ```bash
-   1. PORT=8000
-      GROQ_API_KEY=your_groq_api_key_here
-   2. node server.js    
