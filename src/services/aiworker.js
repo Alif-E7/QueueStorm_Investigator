@@ -10,16 +10,16 @@ const generateAiText = async (complaint, classification, evidence) => {
                 { role: "system", content: generateSystemPrompt() },
                 { role: "user", content: prompt }
             ],
-            model: "llama-3.1-8b-instant", // Fast model for JSON response
+            model: "llama-3.1-8b-instant", 
             temperature: 0.2,
             response_format: { type: "json_object" }
         });
 
         return JSON.parse(chatCompletion.choices[0].message.content);
     } catch (error) {
-        console.log("=== GROQ API ERROR ===");
+        
         console.log(error.message || error);
-        console.log("======================");
+        
         
         // Fallback jeno API crash na kore
         return {

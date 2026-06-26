@@ -6,7 +6,7 @@ QueueStorm Investigator is an AI-powered API service designed to act as a suppor
 - **Runtime:** Node.js
 - **Framework:** Express.js
 - **AI Engine:** Groq API (`llama-3.1-8b-instant`)
-- **Deployment:** Render / AWS / Local
+- **Deployment:** Render / Local
 
 ## 🏗️ Architecture & Logic
 The service follows a layered architecture to ensure accuracy, safety, and performance:
@@ -31,5 +31,5 @@ The service follows a layered architecture to ensure accuracy, safety, and perfo
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Alif-E7/QueueStorm_Investigator
    cd queuestorm-investigator

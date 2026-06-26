@@ -6,7 +6,7 @@ const routes = require('./src/routes/server.js');
 
 const app = express();
 app.use(cors());
-app.use(express.json()); // JSON body পার্স করার জন্য
+app.use(express.json()); 
 
 app.use('/', routes);
 

@@ -10,6 +10,7 @@ const classifyTicket = (complaint) => {
     if (text.includes("failed") || text.includes("deducted")) {
         return { case_type: "payment_failed", department: "payments_ops", severity: "high", human_review_required: false };
     }
+    
     if (text.includes("twice") || text.includes("double")) {
         return { case_type: "duplicate_payment", department: "payments_ops", severity: "high", human_review_required: true };
     }
